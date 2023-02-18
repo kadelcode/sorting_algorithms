@@ -26,7 +26,7 @@ int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 	int pivot = array[last];
 	ssize_t current = first, finder;
 
-	for (finder = first finder < last; finder++)
+	for (finder = first; finder < last; finder++)
 	{
 		if (array[finder] < pivot)
 		{
@@ -43,7 +43,7 @@ int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 		swap(array, current, last);
 		print_array(array, size);
 	}
-	return (currrent);
+	return (current);
 }
 /**
 * qs - quicksort algorithm implementation
