@@ -45,3 +45,22 @@ int lomuto_partition(int *array, ssize_t first, ssize_t last, size_t size)
 	}
 	return (currrent);
 }
+/**
+* qs - quicksort algorithm implementation
+* @array: array
+* @first: first array element
+* @last: last array element
+* @size: array size
+*/
+void qs(int *array, ssize_t first, ssize_t last, int size)
+{
+	ssize_t position = 0;
+
+	if (first < last)
+	{
+		position = lomuto_partition(array, first, last, size);
+
+		qs(array, first, position - 1, size);
+		qs(array, position + 1, last, size);
+	}
+}
