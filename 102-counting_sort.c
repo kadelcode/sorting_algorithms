@@ -11,7 +11,7 @@ void counting_sort(int *array, size_t size)
 	int n, j, *count_array, *aux;
 	size_t i;
 
-	if (!arra size < 2)
+	if (!array || size < 2)
 		return;
 	n = array[0];
 	for (i = 0; i < size; i++)
