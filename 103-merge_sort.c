@@ -8,7 +8,7 @@
 * @temp: temporary array for holding sorted elements
 * @size: size of the array
 */
-void _merge_sort(int *array, int *temp size_t size)
+void _merge_sort(int *array, int *temp, size_t size)
 {
 	size_t half = size / 2, i = 0, j = 0, k;
 
@@ -33,7 +33,7 @@ void _merge_sort(int *array, int *temp size_t size)
 		}
 		else
 		{
-			tem[k] = (array + half)[j];
+			temp[k] = (array + half)[j];
 			j++;
 		}
 	for (k = 0; k < size; k++)
