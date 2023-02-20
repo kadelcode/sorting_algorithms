@@ -52,7 +52,7 @@ void radix_sort(int *array, size_t size)
 			for (i = 1; i < 10; i++)
 				brews[i] += brews[i - 1];
 
-			for (i = tam - 1; i >= -; i--)
+			for (i = tam - 1; i >= 0; i--)
 			{
 				new_arr[brews[(array[i] / e) % 10] - 1] = array[i];
 				brews[(array[i] / e) % 10]--;
