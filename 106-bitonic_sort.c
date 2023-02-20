@@ -14,7 +14,7 @@ void bitonic_compare(char up, int *array, size_t size)
 	size_t i, dist;
 	int swap;
 
-	dist = size /2;
+	dist = size / 2;
 	for (i = 0; i < dist; i++)
 	{
 		if ((array[i] > array[i + dist]) == up)
@@ -48,7 +48,7 @@ void bitonic_merge(char up, int *array, size_t size)
 * @size: size of the sub-array
 * @t: total size of the original array
 */
-void bit_sort(char up, int *aray, size_t size, size_t t)
+void bit_sort(char up, int *array, size_t size, size_t t)
 {
 	if (size < 2)
 		return;
