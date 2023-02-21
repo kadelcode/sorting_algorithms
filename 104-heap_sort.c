@@ -26,7 +26,8 @@ void check_tree(int *array, size_t size_init, size_t size, size_t i)
 		print_array(array, size_init);
 	}
 
-	else if ((br1 < size) && (br2 < size) && (branch2 > branch1 && branch2 > array[i]))
+	else if ((br1 < size) && (br2 < size) &&
+			(branch2 > branch1 && branch2 > array[i]))
 	{
 		n = array[i];
 		array[i] = branch2;
@@ -54,7 +55,7 @@ void heap_sort(int *array, size_t size)
 	if (!array)
 		return;
 
-	for (i = 0; i < size/ 2; i++)
+	for (i = 0; i < size / 2; i++)
 	{
 		check_tree(array, size_init, size, size / 2 - 1 - i);
 	}
