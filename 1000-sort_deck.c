@@ -86,7 +86,7 @@ void kind_sort(deck_node_t **list)
 			if (head_tmp1->next)
 			{
 				flag = 0;
-				head_tmp2 - head_tmp1;
+				head_tmp2 = head_tmp1;
 				while (head_tmp2 && head_tmp2->card->kind > head_tmp2->next->card->kind)
 				{
 					aux1 = head_tmp2;
