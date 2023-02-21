@@ -28,10 +28,11 @@ typedef struct card_s
 } card_t;
 
 /**
-* struct deck_node_s - deck of card
-* @card: pointer to the card of the node
-* @prev: pointer to the previous node of the list
-* @next: pointer to the next node of the list
+* struct deck_node_s - Deck of card
+*
+* @card: Pointer to the card of the node
+* @prev: Pointer to the previous node of the list
+* @next: Pointer to the next node of the list
 */
 typedef struct deck_node_s
 {
