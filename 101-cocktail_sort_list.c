@@ -10,7 +10,7 @@ void swap1(listint_t **list, listint_t *head, listint_t *aux)
 {
 	if (head->prev)
 		head->prev->next = aux;
-    else
+	else
 		*list = aux;
 	if (aux->next)
 		aux->next->prev = head;
@@ -44,8 +44,8 @@ void swap2(listint_t **list, listint_t *head, listint_t *aux)
 }
 
 /**
-* cocktail_sort_list - sorts a doubly linked list of integers in ascending order
-* using Cocktail sort algorithm
+* cocktail_sort_list - sorts a doubly linked list of integers
+* in ascending order using Cocktail sort algorithm
 * @list: pointer to the list head
 */
 void cocktail_sort_list(listint_t **list)
