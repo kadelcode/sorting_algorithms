@@ -10,7 +10,7 @@
 */
 typedef enum kind_e
 {
-	SPADE = 0
+	SPADE = 0,
 	HEART,
 	CLUB,
 	DIAMOND
