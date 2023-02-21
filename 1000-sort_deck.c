@@ -112,3 +112,16 @@ void kind_sort(deck_node_t **list)
 		}
 	}
 }
+/**
+* sort_deck - sorts a deck of cards
+* @deck: pointer to the deck
+* Return: nothing
+*/
+void sort_deck(deck_node_t **deck)
+{
+	if (deck)
+	{
+		kind_sort(deck);
+		num_sort(deck);
+	}
+}
