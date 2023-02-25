@@ -1,28 +1,29 @@
 #include "deck.h"
 /**
-* aux_num_fun - turn into integer card value
-* @head_tmp1: pointer to the list
-* Return: integer rep
-*/
+ * aux_num_fun - turn into integer card value
+ * @head_tmp1: pointer to the list
+ * Return: integer rep
+ **/
 int aux_num_fun(deck_node_t *head_tmp1)
 {
 	int aux_num, j;
 	int num[13] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
 	char val[13] = {'A', '2', '3', '4', '5', '6', '7',
-					'8', '9', '1', 'J', 'Q', 'K'};
+		'8', '9', '1', 'J', 'Q', 'K'};
 
 	for (j = 0; j < 13; j++)
 	{
 		if (head_tmp1->card->value[0] == val[j])
 			aux_num = num[j];
 	}
+
 	return (aux_num);
 }
-
 /**
-* num_sort - sorts a doubly linked list of integers, 4 stages
-* @list: pointer to the list head
-*/
+ * num_sort - sorts a doubly linked list of integers, 4 stages
+ * @list: pointer to the list head
+ * Return: no return
+ **/
 void num_sort(deck_node_t **list)
 {
 	deck_node_t *head_tmp1, *head_tmp2, *aux1, *aux2;
@@ -32,8 +33,8 @@ void num_sort(deck_node_t **list)
 	head_tmp1 = *list;
 	head_tmp2 = *list;
 	for (i = 0; i < 4; i++)
-	{ k = head_tmp1->card->kind;
-		while (head_tmp1->next && head_tmp1->next->card->kind)
+	{ k =  head_tmp1->card->kind;
+		while (head_tmp1->next && head_tmp1->next->card->kind == k)
 		{
 			aux_num1 = aux_num_fun(head_tmp1);
 			aux_num2 = aux_num_fun(head_tmp1->next);
@@ -67,11 +68,11 @@ void num_sort(deck_node_t **list)
 	}
 }
 /**
-* kind_sort - sorts a doubly linked list of integers
-* in ascending order using the Insertion sort algorithm
-* @list: pointer to the list head
-* Return: none
-*/
+ * kind_sort - sorts a doubly linked list of integers
+ * in ascending order using the Insertion sort ailgorithm
+ * @list: pointer to the list head
+ * Return: no return
+ **/
 void kind_sort(deck_node_t **list)
 {
 	deck_node_t *head_tmp1, *head_tmp2, *aux1, *aux2;
@@ -106,6 +107,7 @@ void kind_sort(deck_node_t **list)
 					head_tmp2 = aux2->prev;
 					if (!aux2->prev)
 						*list = aux2;
+					flag = 1;
 				}
 			}
 			if (flag == 0)
@@ -114,10 +116,11 @@ void kind_sort(deck_node_t **list)
 	}
 }
 /**
-* sort_deck - sorts a deck of cards
-* @deck: pointer to the deck
-* Return: nothing
-*/
+ * sort_deck - sorts a deck of cards
+ * @deck: ponter to the deck
+ * Return: no return
+ *
+ **/
 void sort_deck(deck_node_t **deck)
 {
 	if (deck)
